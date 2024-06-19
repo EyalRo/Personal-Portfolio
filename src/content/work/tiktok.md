@@ -1,23 +1,30 @@
 ---
 title: Tiktok
-publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
+publishDate: 2020-09-19 00:00:00
+img: /assets/OCI-tiktok.jpeg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  I managed the sercurity bits for this project working closely with teams across multiple organizations and managing stakeholders both 'up' and 'down' stream.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - Product Management
+  - Leadership
+  - Stakeholder Management
 ---
+Ensuring OCI's cloud offerings met the highest security standards was paramount for this project. As the product manager for the security team, I led a group of engineers focused on ensuring OCI adhered to strict regulations established by the US government. This effort was a critical factor in securing the partnership with TikTok.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+**Here's the press release:**
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+Oracle Chosen as TikTok’s Secure Cloud Provider
+-----------------------------------------------
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+Oracle to take a 12.5 percent stake in TikTok Global
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+**REDWOOD SHORES, Calif.—September 19, 2020**
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+Oracle Corporation (NYSE: ORCL) announced today that it was chosen to become TikTok’s secure cloud technology provider. This technical decision by TikTok was heavily influenced by [Zoom’s recent success](https://www.oracle.com/customers/zoom.html) in moving a large portion of its video conferencing capacity to the Oracle Public Cloud.
+
+“TikTok picked Oracle’s new Generation 2 Cloud infrastructure because it’s much faster, more reliable, and more secure than the first generation technology currently offered by all the other major cloud providers,” said Oracle Chief Technology Officer Larry Ellison. “In the 2020 Industry CloudPath survey that IDC recently released where it surveyed 935 Infrastructure as a Service (IaaS) customers on their satisfaction with the top IaaS vendors including Oracle, Amazon Web Services, Microsoft, IBM and Google Cloud.... Oracle IaaS received the highest satisfaction score.”
+
+“As a part of this agreement, TikTok will run on the Oracle Cloud and Oracle will become a minority investor in TikTok Global,” said Oracle CEO Safra Catz. “Oracle will quickly deploy, rapidly scale, and operate TikTok systems in the Oracle Cloud. We are a hundred percent confident in our ability to deliver a highly secure environment to TikTok and ensure data privacy to TikTok’s American users, and users throughout the world. This greatly improved security and guaranteed privacy will enable the continued rapid growth of the TikTok user community to benefit all stakeholders.”
+
+Based on decades of experience securing the world’s most sensitive data, the [Oracle Generation 2 Cloud](https://www.oracle.com/cloud/) was built from the ground up to fully isolate running applications and autonomously respond to security threats. Oracle will combine its secure cloud technology with continuous code reviews, monitoring, and auditing to provide unprecedented assurance that U.S. TikTok user data is private and secure.
