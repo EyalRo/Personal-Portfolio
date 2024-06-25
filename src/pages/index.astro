@@ -15,6 +15,7 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 // Page section components
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
+import Image from "astro/components/Image.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
@@ -46,11 +47,12 @@ const projects = (await getCollection("work"))
 					</div>
 				</Hero>
 
-				<img
+				<Image
 					alt="Eyal Rotbart smiling in a snazzy fedora hat and golden sunglasses"
 					width="200"
 					height="620"
 					src="/assets/dino-portrait.jpeg"
+					loading="eager"
 				/>
 			</header>
 
