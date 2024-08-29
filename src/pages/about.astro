@@ -6,123 +6,115 @@ import Hero from "../components/Hero.astro";
 ---
 
 <BaseLayout
-	title="About | Eyal Rotbart"
-	description="About Eyal Rotbart Lorem Ipsum"
->
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/dino-at-work.jpeg"
-					alt="Eyal Rotbart at work with a colleague"
-				/>
-			</Hero>
+  title="About | Eyal Rotbart"
+  description="About Eyal Rotbart Lorem Ipsum">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+      />
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						My career path has placed me at the intersection of
-						business and technology. I possess a well-rounded
-						skillset that combines product management expertise with
-						a strong foundation in software engineering.
-					</p>
-					<br />
-					<p>
-						As a freelance product manager, I help companies of all
-						sizes leverage technology to make their employees and
-						customers happy regardless of the company's domain.
-						Before that, my experience spanned various product
-						management roles at Oracle, where I focused on the
-						security vertical, working with enterprise and
-						government customers.
-					</p>
-					<br />
-					<p>
-						My true passion is in crafting innovative products that
-						tackle real-world problems.
-					</p>
-				</div>
-			</section>
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            My career path has placed me at the intersection of
+            business and technology. I possess a well-rounded
+            skillset that combines product management expertise
+            with a strong foundation in software engineering.
+          </p>
+          <br />
+          <p>
+            As a freelance product manager, I help companies of
+            all sizes leverage technology to make their employees
+            and customers happy regardless of the company's
+            domain. Before that, my experience spanned various
+            product management roles at Oracle, where I focused
+            on the security vertical, working with enterprise and
+            government customers.
+          </p>
+          <br />
+          <p>
+            My true passion is in crafting innovative products
+            that tackle real-world problems.
+          </p>
+        </div>
+      </section>
 
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						<b>Hard Skills:</b> Coding, security, product management
-						(including product roadmapping and go-to-market strategy),
-						user research & market analysis, metrics & analytics. <b>Soft
-						Skills:</b> Communication, leadership, problem solving, cross-functional
-						collaboration, customer focus (understanding customer needs
-						& value proposition).
-					</p>
-				</div>
-			</section>
-		</main>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>
+            <b>Hard Skills:</b> Coding, security, product management
+            (including product roadmapping and go-to-market strategy),
+            user research & market analysis, metrics & analytics.
+            <b>Soft Skills:</b> Communication, leadership, problem
+            solving, cross-functional collaboration, customer focus
+            (understanding customer needs & value proposition).
+          </p>
+        </div>
+      </section>
+    </main>
 
-		<ContactCTA />
-	</div>
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+  .content {
+    grid-column: 2 / 4;
+  }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
 </style>
