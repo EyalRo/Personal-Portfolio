@@ -1,0 +1,9 @@
+{
+    "links": [
+        {
+            "href": "https://auth.ops.in.net/application/o/tailscale/",
+            "rel": "http://openid.net/specs/connect/1.0/issuer"
+        }
+    ],
+    "subject": "acct:stags@isdino.com"
+}
