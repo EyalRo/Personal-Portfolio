@@ -1,0 +1,107 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PillarCard from '@components/PillarCard.astro';
+import MetricsBar from '@components/MetricsBar.astro';
+import WorkCard from '@components/WorkCard.astro';
+import { getCollection } from 'astro:content';
+
+const allWork = await getCollection('work');
+const featuredWork = allWork.filter((entry) => entry.data.featured).sort((a, b) => a.data.order - b.data.order);
+
+const pillars = [
+  {
+    title: 'Systems Thinking',
+    description: 'I see the whole architecture, not just my piece. Products that work at enterprise scale require understanding how systems interact, fail, and recover.',
+    icon: 'systems',
+  },
+  {
+    title: 'Operational Excellence',
+    description: 'Effective observability requires alignment of technology, process, and culture. Monitoring shifts from isolated metrics to holistic end-to-end functional health, reducing MTTD and MTTR.',
+    icon: 'operations',
+  },
+  {
+    title: 'Security by Design',
+    description: 'Security is not a checkbox. It is a product discipline. I have shipped products that passed government audits and enabled multi-billion-dollar partnerships.',
+    icon: 'security',
+  },
+  {
+    title: 'Technical Translation',
+    description: 'I speak engineering, executive, and customer. The best product strategy is useless if it cannot be understood and executed by every stakeholder.',
+    icon: 'translation',
+  },
+];
+---
+
+<BaseLayout title="Eyal Rotbart - Principal Technical Product Manager">
+  <!-- Hero -->
+  <section class="container-wide py-16 md:py-24">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1 text-center md:text-left">
+        <p class="text-teal-600 dark:text-teal-400 font-medium mb-2">Hello, I'm</p>
+        <h1 class="heading-xl mb-4">Eyal Rotbart</h1>
+        <p class="text-xl md:text-2xl font-semibold text-slate-700 dark:text-slate-300 mb-3">
+          Principal Technical Product Manager
+        </p>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
+          Cloud Infrastructure · Security · Observability
+        </p>
+        <p class="text-body max-w-xl mb-8">
+          I define and deliver enterprise products that make complex systems observable, secure, and reliable. 15+ years turning technical architecture into product strategy. Currently leading observability for <strong class="text-slate-800 dark:text-slate-200">Enterprise Integration Services (EIS)</strong> at Puget Sound Energy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="/work/" class="btn-primary">View My Work</a>
+          <a href="/contact/" class="btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="flex-shrink-0">
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-teal-600/20 dark:border-teal-400/20 shadow-xl">
+          <img
+            src="/assets/ProfilePic.jpeg"
+            alt="Eyal Rotbart"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="container-wide py-16">
+    <h2 class="heading-lg text-center mb-12">What I Bring</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pillars.map((pillar) => (
+        <PillarCard title={pillar.title} description={pillar.description} icon={pillar.icon} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <MetricsBar />
+
+  <!-- Featured Work -->
+  <section class="container-wide py-16">
+    <div class="flex items-center justify-between mb-12">
+      <h2 class="heading-lg">Selected Work</h2>
+      <a href="/work/" class="text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors">
+        View All →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {featuredWork.map((entry) => (
+        <WorkCard entry={entry} />
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+    <div class="container-wide py-16 text-center">
+      <h2 class="heading-lg mb-4">Interested in working together?</h2>
+      <p class="text-body max-w-lg mx-auto mb-8">
+        I'm always open to discussing new opportunities, interesting problems, and ways to build products that matter.
+      </p>
+      <a href="/contact/" class="btn-primary">Send Me a Message</a>
+    </div>
+  </section>
+</BaseLayout>

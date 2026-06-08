@@ -1,0 +1,24 @@
+---
+const metrics = [
+  { value: '$20B', label: 'partnership enabled' },
+  { value: '$10M+/yr', label: 'revenue secured' },
+  { value: '15+', label: 'years in product' },
+  { value: '3', label: 'cloud platforms' },
+];
+---
+
+<div class="bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+  <div class="container-wide py-8">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+      {metrics.map((metric, i) => (
+        <>
+          {i > 0 && <span class="hidden md:block text-slate-300 dark:text-slate-700">·</span>}
+          <div class="text-center">
+            <span class="text-2xl md:text-3xl font-bold text-teal-600 dark:text-teal-400">{metric.value}</span>
+            <span class="block text-sm text-slate-500 dark:text-slate-400 mt-1">{metric.label}</span>
+          </div>
+        </>
+      ))}
+    </div>
+  </div>
+</div>

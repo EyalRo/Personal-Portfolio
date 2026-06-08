@@ -1,0 +1,102 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+
+const whatIDo = [
+  {
+    title: 'Product Strategy',
+    description: 'Roadmaps, go-to-market planning, competitive positioning. I translate market needs into coherent product direction.',
+  },
+  {
+    title: 'Technical Architecture',
+    description: 'Distributed systems, event-driven design, cloud-native infrastructure. I bridge engineering reality and product vision.',
+  },
+  {
+    title: 'Security & Compliance',
+    description: 'IAM, zero-trust, audit programs, government standards. Security as a product discipline, not a checkbox.',
+  },
+  {
+    title: 'Observability & SRE',
+    description: 'MTTD/MTTR reduction, monitoring strategy, systems consolidation. I lead observability for Enterprise Integration Services (EIS) by aligning technology, process, and culture across development teams, and shifting monitoring from isolated metrics to end-to-end functional health.',
+  },
+  {
+    title: 'Cross-Functional Leadership',
+    description: 'Aligning engineering, security, legal, UX, and executive teams. Coordinating across organizations to deliver complex products under stringent requirements.',
+  },
+];
+
+const technicalDepth = [
+  {
+    category: 'Cloud',
+    items: 'AWS (Serverless, Lambda, EventBridge, CloudWatch), OCI, Azure',
+  },
+  {
+    category: 'IaC',
+    items: 'Terraform',
+  },
+  {
+    category: 'Development',
+    items: 'React.js, Node.js, Python, Go, Docker, CI/CD',
+  },
+  {
+    category: 'Data',
+    items: 'Oracle Datalake, Data Warehouse',
+  },
+];
+---
+
+<BaseLayout title="Approach" description="Eyal Rotbart's methodology: how he thinks about products, technical depth, and leadership philosophy.">
+  <section class="container-prose py-16">
+    <h1 class="heading-xl mb-8">Approach</h1>
+
+    <!-- Background -->
+    <div class="mb-16">
+      <h2 class="heading-md mb-6">Background</h2>
+      <div class="space-y-4 text-body">
+        <p>
+          My career sits at the intersection of technical architecture and product strategy. I have spent 15+ years defining, building, and launching enterprise products in cloud infrastructure, security, and observability.
+        </p>
+        <p>
+          At Oracle, I owned cloud security products that passed government audits and enabled a $20B partnership. At Puget Sound Energy, I lead observability for <strong class="text-slate-800 dark:text-slate-200">Enterprise Integration Services (EIS)</strong>: the integration layer connecting SAP, advanced distribution management systems, AWS backends, customer mobile platforms, and numerous SaaS and internal applications. I also explore AI-driven tooling as a personal initiative to find ways it can improve operations.
+        </p>
+        <p>
+          I build observability culture across dev teams. Technology, process, and culture all matter. I shift monitoring from isolated metrics to end-to-end functional health. As a consultant, I have launched products across healthcare, e-commerce, and media.
+        </p>
+        <p class="font-medium text-slate-800 dark:text-slate-200">
+          I write technical specs, design architectures, and ship products.
+        </p>
+      </div>
+    </div>
+
+    <!-- What I Do -->
+    <div class="mb-16">
+      <h2 class="heading-md mb-8">What I Do</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {whatIDo.map((item) => (
+          <div class="card">
+            <h3 class="heading-sm mb-2">{item.title}</h3>
+            <p class="text-body text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Technical Depth -->
+    <div class="mb-16">
+      <h2 class="heading-md mb-8">Technical Depth</h2>
+      <div class="space-y-4">
+        {technicalDepth.map((item) => (
+          <div class="flex flex-col sm:flex-row sm:items-start gap-2 py-3 border-b border-slate-200 dark:border-slate-800">
+            <span class="font-semibold text-slate-800 dark:text-slate-200 min-w-[120px]">{item.category}</span>
+            <span class="text-body text-sm">{item.items}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-slate-50 dark:bg-slate-900 rounded-xl p-8 text-center">
+      <h3 class="heading-md mb-4">Want to discuss how I can help your team?</h3>
+      <a href="/contact/" class="btn-primary">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>

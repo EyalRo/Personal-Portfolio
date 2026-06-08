@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import WorkCard from '@components/WorkCard.astro';
+import { getCollection } from 'astro:content';
+
+const allWork = await getCollection('work');
+const featuredWork = allWork.filter((entry) => entry.data.featured).sort((a, b) => a.data.order - b.data.order);
+const additionalWork = allWork.filter((entry) => !entry.data.featured).sort((a, b) => a.data.order - b.data.order);
+
+const additionalProjects = [
+  { title: 'Shafik Confectionery', description: 'Led market research, brand positioning, and full-stack development to launch the company\'s US digital presence.', tags: ['E-Commerce', 'React.js', 'Brand Strategy'] },
+  { title: 'Forex ML Platform', description: 'Architected a machine learning-driven trading system using microservices, multi-source data ingestion, and prediction engines.', tags: ['Machine Learning', 'Python', 'TensorFlow', 'Docker'] },
+];
+---
+
+<BaseLayout title="My Work" description="Featured projects and case studies from Eyal Rotbart's career in product management and technical leadership.">
+  <section class="container-wide py-16">
+    <h1 class="heading-xl mb-4">My Work</h1>
+    <p class="text-body max-w-2xl mb-12">
+      A selection of projects spanning cloud infrastructure, security, and observability. Each represents a unique challenge in turning technical complexity into product strategy.
+    </p>
+
+    <!-- Featured Work -->
+    <h2 class="heading-md mb-8">Featured</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      {featuredWork.map((entry) => (
+        <WorkCard entry={entry} />
+      ))}
+    </div>
+
+    <!-- Additional Work -->
+    <h2 class="heading-md mb-8">Additional Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {additionalWork.map((entry) => (
+        <WorkCard entry={entry} />
+      ))}
+    </div>
+
+    <!-- Listed Projects (no individual pages) -->
+    <div class="border-t border-slate-200 dark:border-slate-800 pt-8">
+      <h3 class="heading-sm mb-6">Also Delivered</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {additionalProjects.map((project) => (
+          <div class="card">
+            <h4 class="heading-sm mb-2">{project.title}</h4>
+            <p class="text-body text-sm mb-3">{project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
