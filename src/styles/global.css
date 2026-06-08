@@ -11,6 +11,42 @@
     @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
+
+  .prose h2 {
+    @apply text-2xl font-semibold tracking-tight mt-10 mb-4 text-slate-900 dark:text-slate-100;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold mt-8 mb-3 text-slate-800 dark:text-slate-200;
+  }
+
+  .prose p {
+    @apply text-slate-600 dark:text-slate-400 leading-relaxed mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-4 text-slate-600 dark:text-slate-400 space-y-2;
+  }
+
+  .prose li {
+    @apply mb-1;
+  }
+
+  .prose strong {
+    @apply text-slate-800 dark:text-slate-200 font-semibold;
+  }
+
+  .prose a {
+    @apply text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 underline underline-offset-4 decoration-teal-600/30 hover:decoration-teal-600 transition-colors;
+  }
+
+  .prose code {
+    @apply bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  .prose hr {
+    @apply border-slate-200 dark:border-slate-800 my-8;
+  }
 }
 
 @layer components {
