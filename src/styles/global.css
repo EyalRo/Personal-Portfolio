@@ -8,16 +8,21 @@
   }
 
   body {
-    @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+    @apply bg-white text-slate-900 dark:text-slate-200 font-body;
+    background-color: #ffffff;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
+  .dark body {
+    background-color: #0c0f17;
+  }
+
   .prose h2 {
-    @apply text-2xl font-semibold tracking-tight mt-10 mb-4 text-slate-900 dark:text-slate-100;
+    @apply text-2xl font-display font-semibold tracking-tight mt-10 mb-4 text-slate-900 dark:text-slate-100;
   }
 
   .prose h3 {
-    @apply text-xl font-semibold mt-8 mb-3 text-slate-800 dark:text-slate-200;
+    @apply text-xl font-display font-semibold mt-8 mb-3 text-slate-800 dark:text-slate-200;
   }
 
   .prose p {
@@ -37,7 +42,7 @@
   }
 
   .prose a {
-    @apply text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 underline underline-offset-4 decoration-teal-600/30 hover:decoration-teal-600 transition-colors;
+    @apply text-amber-700 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300 underline underline-offset-4 decoration-amber-700/30 hover:decoration-amber-700 transition-colors;
   }
 
   .prose code {
@@ -59,19 +64,19 @@
   }
 
   .heading-xl {
-    @apply text-4xl md:text-5xl font-bold tracking-tight;
+    @apply font-display text-4xl md:text-5xl font-bold tracking-tight;
   }
 
   .heading-lg {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    @apply font-display text-3xl md:text-4xl font-bold tracking-tight;
   }
 
   .heading-md {
-    @apply text-2xl font-semibold tracking-tight;
+    @apply font-display text-2xl font-semibold tracking-tight;
   }
 
   .heading-sm {
-    @apply text-xl font-semibold;
+    @apply font-display text-xl font-semibold;
   }
 
   .text-body {
@@ -79,22 +84,49 @@
   }
 
   .link-accent {
-    @apply text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 underline underline-offset-4 decoration-teal-600/30 hover:decoration-teal-600 transition-colors;
+    @apply text-amber-700 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300 underline underline-offset-4 decoration-amber-700/30 hover:decoration-amber-700 transition-colors;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-lg transition-colors;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-700 hover:bg-amber-800 text-white font-display font-medium rounded-lg transition-colors;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 hover:border-teal-600 dark:hover:border-teal-400 text-slate-700 dark:text-slate-300 font-medium rounded-lg transition-colors;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-700 hover:border-amber-700 dark:hover:border-amber-400 text-slate-700 dark:text-slate-300 font-medium rounded-lg transition-colors;
   }
 
   .card {
-    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-teal-600/50 dark:hover:border-teal-400/50 transition-colors;
+    @apply bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-slate-800 rounded-xl p-6 hover:border-amber-700/40 dark:hover:border-amber-400/30 transition-colors;
   }
 
   .tag {
     @apply inline-block px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full;
+  }
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .dot-grid {
+  background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+}
+
+.accent-bar {
+  display: block;
+  width: 5rem;
+  height: 3px;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
