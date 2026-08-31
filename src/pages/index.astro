@@ -9,16 +9,16 @@ const featuredWork = allWork.filter((entry) => entry.data.featured).sort((a, b) 
 
 const pillars = [
   {
-    title: 'Systems Thinking',
-    description: 'I see the whole architecture, not just my piece. Products that work at enterprise scale require understanding how systems interact, fail, and recover.',
+    title: 'Workflow-First Product Design',
+    description: 'I start with the user workflow, the systems it crosses, and the decisions it must support. That is how complex platforms—and AI capabilities—become useful products.',
   },
   {
-    title: 'Operational Excellence',
-    description: 'Effective observability requires alignment of technology, process, and culture. I shift monitoring from isolated metrics to holistic end-to-end functional health.',
+    title: 'Operational Feedback Loops',
+    description: 'I design for observable behavior, measurable quality, and learning after launch. Technology, process, and culture all matter when systems run in production.',
   },
   {
     title: 'Security by Design',
-    description: 'Security is not a checkbox. It is a product discipline. I have shipped products that passed government audits and enabled multi-billion-dollar partnerships.',
+    description: 'Security, privacy, identity, and auditability are product constraints—not late-stage checkboxes. They are how enterprise users decide whether to trust a system.',
   },
   {
     title: 'Technical Translation',
@@ -43,14 +43,14 @@ const pillars = [
             Principal Technical Product Manager
           </p>
           <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mb-6">
-            I define and deliver enterprise products that make complex systems observable, secure, and reliable. Currently leading observability for Enterprise Integration Services at Puget Sound Energy.
+            I lead technical product work for AI/LLM integrations and enterprise platforms—making complex capabilities useful, governable, observable, and secure in production.
           </p>
           <p class="text-sm text-slate-400 dark:text-slate-500 mb-8 flex items-center gap-3 flex-wrap">
             <span>15+ years in product</span>
             <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-            <span>Multi-cloud & hybrid</span>
+            <span>AI &amp; LLM integrations</span>
             <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-            <span>Security &middot; Observability &middot; Operational Excellence</span>
+            <span>Enterprise platforms &middot; Security &middot; Observability</span>
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/work/" class="btn-primary">View My Work</a>
@@ -73,7 +73,7 @@ const pillars = [
 
   <!-- Pillars -->
   <section class="container-wide py-20">
-    <h2 class="heading-lg mb-10">How I Work</h2>
+    <h2 class="heading-lg mb-10">How I Build Trusted Systems</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
       {pillars.map((pillar) => (
         <PillarCard title={pillar.title} description={pillar.description} />
