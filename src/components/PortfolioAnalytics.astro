@@ -1,0 +1,86 @@
+---
+// The collector intentionally stores a random pseudonymous identifier instead
+// of IP addresses, full user agents, or browser fingerprints.
+---
+
+<script>
+  const endpoint = '/analytics/portfolio/ingest';
+  const applicationKey = 'isdino:application-id';
+  const visitorKey = 'isdino:portfolio-visitor';
+  const sessionKey = 'isdino:portfolio-session';
+  const application = new URLSearchParams(window.location.search).get('application');
+
+  if (application && /^\d+$/.test(application)) {
+    sessionStorage.setItem(applicationKey, application);
+  }
+
+  const getOrCreate = (storage: Storage, key: string) => {
+    let value = storage.getItem(key);
+    if (!value) {
+      value = crypto.randomUUID();
+      storage.setItem(key, value);
+    }
+    return value;
+  };
+
+  const visitorHash = getOrCreate(localStorage, visitorKey);
+  const sessionId = getOrCreate(sessionStorage, sessionKey);
+  const applicationId = Number(sessionStorage.getItem(applicationKey));
+  const pagePath = window.location.pathname;
+  const startedAt = Date.now();
+  let activeStartedAt = document.visibilityState === 'visible' ? Date.now() : null;
+  let activeMilliseconds = 0;
+  let maxScrollPercent = 0;
+  let qualified = false;
+
+  const send = (eventType: string, extra: Record<string, number> = {}) => {
+    const body = JSON.stringify({
+      visitor_hash: visitorHash,
+      session_id: sessionId,
+      application_id: Number.isInteger(applicationId) && applicationId >= 0 ? applicationId : undefined,
+      event_type: eventType,
+      page_path: pagePath,
+      ...extra,
+    });
+    void fetch(endpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body,
+      keepalive: true,
+      credentials: 'same-origin',
+    });
+  };
+
+  const activeSeconds = () => Math.floor((activeMilliseconds + (activeStartedAt ? Date.now() - activeStartedAt : 0)) / 1000);
+  const qualify = () => {
+    if (!qualified) {
+      qualified = true;
+      send('qualified_visit', { active_seconds: activeSeconds(), scroll_percent: maxScrollPercent });
+    }
+  };
+
+  const updateScroll = () => {
+    const maximum = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = maximum > 0 ? Math.round((window.scrollY / maximum) * 100) : 100;
+    maxScrollPercent = Math.max(maxScrollPercent, Math.min(100, Math.max(0, percent)));
+    if (maxScrollPercent >= 25) qualify();
+  };
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') activeStartedAt = Date.now();
+    else if (activeStartedAt) {
+      activeMilliseconds += Date.now() - activeStartedAt;
+      activeStartedAt = null;
+    }
+  });
+  window.addEventListener('scroll', updateScroll, { passive: true });
+  window.addEventListener('click', qualify, { once: true, capture: true });
+  window.setTimeout(qualify, 15_000);
+  window.addEventListener('pagehide', () => {
+    updateScroll();
+    const seconds = activeSeconds();
+    if (seconds > 0) send('active_seconds', { active_seconds: seconds, scroll_percent: maxScrollPercent });
+  });
+
+  send('page_view');
+</script>
