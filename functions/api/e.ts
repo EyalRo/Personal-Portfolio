@@ -2,7 +2,7 @@
 // Validates and filters events, then forwards them to VictoriaLogs.
 //
 // Pages env:
-//   VL_URL                      e.g. https://logs.virtualdino.com (no trailing slash)
+//   VL_URL                      set in wrangler.toml [vars]: https://isdino-ingest.virtualdino.com
 //   CF_ACCESS_CLIENT_ID/SECRET  optional, if VictoriaLogs sits behind Cloudflare Access
 
 interface Env {
@@ -79,7 +79,9 @@ export const onRequestPost = async ({ request, env, waitUntil }: Ctx): Promise<R
     record.target = str(raw.target, 100);
   }
 
-  if (env.VL_URL) {
+  if (!env.VL_URL) {
+    console.warn('VL_URL is not set; dropping event');
+  } else {
     const headers: Record<string, string> = { 'content-type': 'application/stream+json' };
     if (env.CF_ACCESS_CLIENT_ID && env.CF_ACCESS_CLIENT_SECRET) {
       headers['CF-Access-Client-Id'] = env.CF_ACCESS_CLIENT_ID;

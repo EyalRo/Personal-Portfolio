@@ -4,3 +4,6 @@ pages_build_output_dir = "dist"
 
 [build]
 build_image = "v3"
+
+[vars]
+VL_URL = "https://isdino-ingest.virtualdino.com"
