@@ -9,16 +9,16 @@ image: "/assets/memory-block.jpg"
 
 ## Overview
 
-MemoryBlocks offers personalized photo prints on wood. I built the core Shopify storefront, including a bespoke design feature that allows customers to personalize their prints thoroughly.
+MemoryBlocks offers personalized photo prints on wood. I built the core Shopify storefront, including a custom design tool for personalizing prints.
 
 ## The Feature
 
-Customers have **full creative control**:
+Customers can:
 - Upload any photo
 - Choose block size and shape
 - Add custom text or layouts
 
-The design ties directly into the standard Shopify add-to-cart process, utilizing all Shopify features: multiple items, billing, order editing, and more.
+The design ties directly into the standard Shopify add-to-cart process, so multiple items, billing, and order editing all work as usual.
 
 ## Technologies
 
@@ -26,4 +26,4 @@ Shopify Liquid · Fabric.js · React.js
 
 ## Outcome
 
-Significantly improved online sales capabilities by enabling personalized product creation directly in the shopping flow.
+Customers can design and buy a personalized block in one flow, without leaving the store.

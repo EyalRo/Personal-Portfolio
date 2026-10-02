@@ -9,20 +9,20 @@ const featuredWork = allWork.filter((entry) => entry.data.featured).sort((a, b) 
 
 const pillars = [
   {
-    title: 'Workflow-First Product Design',
-    description: 'I start with the user workflow, the systems it crosses, and the decisions it must support. That is how complex platforms—and AI capabilities—become useful products.',
+    title: 'Start with the workflow',
+    description: 'I begin with what people are trying to get done and which systems that touches. The tooling comes after.',
   },
   {
-    title: 'Operational Feedback Loops',
-    description: 'I design for observable behavior, measurable quality, and learning after launch. Technology, process, and culture all matter when systems run in production.',
+    title: 'Know what is happening in production',
+    description: 'If you can\'t see a system working, you can\'t tell whether it is working. I build the monitoring in with the product, not after it.',
   },
   {
-    title: 'Security by Design',
-    description: 'Security, privacy, identity, and auditability are product constraints—not late-stage checkboxes. They are how enterprise users decide whether to trust a system.',
+    title: 'Security is part of the spec',
+    description: 'Identity, access, privacy, and audit logs go in the first requirements doc. Retrofitting them is slower and worse.',
   },
   {
-    title: 'Technical Translation',
-    description: 'I speak engineering, executive, and customer. The best product strategy is useless if it cannot be understood and executed by every stakeholder.',
+    title: 'Make it understood by everyone involved',
+    description: 'Most failed rollouts I have seen were misunderstandings between teams, not technical failures. I spend a lot of time on that gap.',
   },
 ];
 ---
@@ -43,14 +43,16 @@ const pillars = [
             Principal Technical Product Manager
           </p>
           <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mb-6">
-            I lead technical product work for AI/LLM integrations and enterprise platforms—making complex capabilities useful, governable, observable, and secure in production.
+            I'm a product manager for enterprise platforms: security, observability, and integration. Lately that includes getting AI tools into a company in a way that's controlled, logged, and connected to the systems people already use.
           </p>
           <p class="text-sm text-slate-400 dark:text-slate-500 mb-8 flex items-center gap-3 flex-wrap">
             <span>15+ years in product</span>
             <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-            <span>AI &amp; LLM integrations</span>
+            <span>Security</span>
             <span class="text-slate-300 dark:text-slate-700">&middot;</span>
-            <span>Enterprise platforms &middot; Security &middot; Observability</span>
+            <span>Observability</span>
+            <span class="text-slate-300 dark:text-slate-700">&middot;</span>
+            <span>Enterprise integration</span>
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="/work/" class="btn-primary">View My Work</a>
@@ -71,9 +73,17 @@ const pillars = [
     </div>
   </section>
 
+  <!-- A note on AI -->
+  <section class="container-prose py-12">
+    <h2 class="heading-lg mb-4">A note on AI</h2>
+    <p class="text-body">
+      I don't call myself an AI expert, and I'd be wary of anyone who does. These tools have been in people's hands for a few years at most. What I do bring is the unglamorous side that decides whether any of it survives contact with a real company: identity and access, audit trails, guardrails, monitoring, and integration with the systems employees actually work in.
+    </p>
+  </section>
+
   <!-- Pillars -->
   <section class="container-wide py-20">
-    <h2 class="heading-lg mb-10">How I Build Trusted Systems</h2>
+    <h2 class="heading-lg mb-10">How I work</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
       {pillars.map((pillar) => (
         <PillarCard title={pillar.title} description={pillar.description} />
@@ -101,7 +111,7 @@ const pillars = [
     <div class="container-wide py-20 text-center">
       <h2 class="heading-lg mb-4">Let's talk</h2>
       <p class="text-slate-600 dark:text-slate-400 max-w-lg mx-auto mb-8 leading-relaxed">
-        Open to new opportunities, interesting technical challenges, and conversations about building products that matter.
+        I'm open to new roles. If you're working out how to adopt AI tools without losing control of your data or your audit trail, I'd like to hear about it.
       </p>
       <a href="/contact/" class="btn-primary">Send a Message</a>
     </div>

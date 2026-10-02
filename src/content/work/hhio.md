@@ -9,19 +9,18 @@ image: "/assets/hhio.png"
 
 ## Overview
 
-Home Infusion Options (HHIO) coordinates in-home care and patient medication management, relying heavily on efficient insurance billing. Accurate claims processing ensures patients are reimbursed for vital services while guaranteeing they receive the coverage they deserve.
+Home Infusion Options (HHIO) coordinates in-home care and patient medication management, relying heavily on efficient insurance billing. Accurate claims processing is what gets the pharmacy paid and keeps patients covered.
 
 ## The Problem
 
-Manual billing processes were error-prone and time-consuming, creating friction in the revenue cycle and diverting attention from patient care.
+Manual billing processes were error-prone and time-consuming, creating friction in the revenue cycle and pulling staff away from patient care.
 
 ## Solution
 
-Designed a **billing API** capable of integrating seamlessly with HHIO's existing systems. The API automates many of the processes associated with insurance billing.
+Designed a **billing API** capable of connecting to HHIO's existing systems and automating much of the insurance billing process.
 
 ## Outcome
 
-- **Reduced billing errors** through automation
-- **Streamlined the revenue cycle** for HHIO
-- **Freed up valuable time** so HHIO could focus on providing exceptional patient care
-- **Ensured financial stability and regulatory compliance**
+- Fewer billing errors, because the manual steps were automated
+- A shorter revenue cycle
+- Less staff time spent on billing

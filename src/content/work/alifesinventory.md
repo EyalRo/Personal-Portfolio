@@ -9,17 +9,17 @@ image: "/assets/Lifesinventory.jpeg"
 
 ## Overview
 
-A Life's Inventory helps people navigate the often-complicated end-of-life planning process in a secure, manageable, and approachable way.
+A Life's Inventory helps people navigate the often-complicated end-of-life planning process in a way that is secure and easy to follow.
 
 ## The Platform
 
-A secure online platform that acts as a digital vault where users can organize and store vital documents:
+A secure online vault for organizing and storing documents:
 
 - Legal documents: wills, trusts, power of attorney designations
 - Medical directives
 - Personal preferences for funeral arrangements
 
-The platform acts as a central hub, consolidating critical information and ensuring loved ones have easy access during difficult times.
+Everything is in one place, so loved ones can find it when they need it.
 
 ## My Role
 

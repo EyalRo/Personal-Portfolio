@@ -13,25 +13,21 @@ Enterprise Integration Services (EIS) is the integration layer connecting SAP, a
 
 ## Challenge
 
-Dozens of disconnected integration points: SAP to AWS, distribution management outages triggering customer notifications, SaaS connecting to internal apps. No single pane of glass existed. Incident detection was slow. Tracing end-to-end service dependencies was difficult. Monitoring focused on technical metrics like latency and HTTP codes rather than whether services were actually doing their job from the user's perspective.
+The integrations were many and separate: SAP to AWS, distribution management outages triggering customer notifications, SaaS connecting to internal apps. Nothing gave a single view of integration health. Incident detection was slow. Tracing end-to-end service dependencies was difficult. 
 
 ## Approach
 
-### Three Pillars: Technology, Process, Culture
+### Technology, process, and culture
 
-Effective observability requires alignment across all three. I established monitoring, alerting, and incident response practices grounded in this framework, ensuring sustainable success within development teams.
+Tooling alone doesn't fix observability. I set up monitoring, alerting, and incident response practices, and worked with the development teams so they owned them afterward.
 
-### Shift to Functional Health
+### Measure whether the service does its job
 
-Moved monitoring from isolated technical metrics to **holistic end-to-end functional health**: measuring whether services are up and doing their job from the user perspective. Users care if their service works. They do not care what HTTP code it returns.
+Monitoring had been about latency and HTTP codes. I moved it to end-to-end functional health: is the service doing what the user needs? Users care whether it works, not what status code it returns.
 
 ### Consolidation & Architecture
 
 Consolidated fragmented monitoring and integration platforms into a unified, observable architecture. Guided engineering teams building AWS serverless microservices with event-driven architecture, managed via Terraform (IaC) and monitored through CloudWatch.
-
-### AI Exploration (Personal Initiative)
-
-On my own time, I have explored how LLM-powered knowledge bases and AI-driven workflows could complement observability. This includes retrieving contextual information about microservices, automating documentation, and mapping service dependencies. I am interested in where operations are heading.
 
 ## Outcome
 

@@ -24,4 +24,4 @@ Traditional methods require deploying and maintaining a separate jump host in a 
 
 ## Outcome
 
-OCI Bastion became the **de facto standard for private resource access on Oracle Cloud Infrastructure**, simplifying a relatively technical and complex task while maintaining a solid security posture.
+OCI Bastion became the recommended way to reach private resources on Oracle Cloud Infrastructure. It replaced a fiddly manual setup without weakening access controls.

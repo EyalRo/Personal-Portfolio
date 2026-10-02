@@ -3,28 +3,28 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 const whatIDo = [
   {
-    title: 'AI & LLM Integrations',
-    description: 'Workflow-first AI product design: defining useful jobs, data boundaries, evaluation signals, safe failure modes, and human escalation before scaling adoption.',
+    title: 'Security and access',
+    description: 'IAM, zero-trust access, audit programs, government compliance. The goal is something that passes review and that people will actually use.',
   },
   {
-    title: 'Product Strategy',
-    description: 'Roadmaps, go-to-market planning, competitive positioning. I translate market needs into coherent product direction.',
+    title: 'Governance and guardrails',
+    description: 'Policy that engineering can implement and an auditor can verify. Clear data boundaries, logging, and approval paths.',
   },
   {
-    title: 'Technical Architecture',
-    description: 'Distributed systems, event-driven design, cloud-native infrastructure. I bridge engineering reality and product vision.',
+    title: 'Observability',
+    description: 'I lead observability for Enterprise Integration Services at Puget Sound Energy. The aim is to measure whether a service is doing its job for the person using it, not just whether it returns a 200.',
   },
   {
-    title: 'Security & Compliance',
-    description: 'IAM, zero-trust, audit programs, government standards. Security as a product discipline, not a checkbox.',
+    title: 'Architecture',
+    description: 'Distributed, event-driven, cloud-native systems. I bridge what engineering can build and what the product needs.',
   },
   {
-    title: 'Observability & SRE',
-    description: 'MTTD/MTTR reduction, monitoring strategy, systems consolidation. I lead observability for Enterprise Integration Services (EIS) by aligning technology, process, and culture across development teams, and shifting monitoring from isolated metrics to end-to-end functional health.',
+    title: 'Working across teams',
+    description: 'Engineering, security, legal, UX, and executives each need something different. I handle the coordination so the work gets finished.',
   },
   {
-    title: 'Cross-Functional Leadership',
-    description: 'Aligning engineering, security, legal, UX, and executive teams. Coordinating across organizations to deliver complex products under stringent requirements.',
+    title: 'Adopting AI tools safely',
+    description: 'Connecting AI tools to employee systems with proper identity, data boundaries, logging, and a way for a person to step in. Fundamentals first, because the tools are still changing.',
   },
 ];
 
@@ -48,7 +48,7 @@ const technicalDepth = [
 ];
 ---
 
-<BaseLayout title="Approach" description="Eyal Rotbart's methodology: how he thinks about products, technical depth, and leadership philosophy.">
+<BaseLayout title="Approach" description="How Eyal Rotbart approaches security, operations, and enterprise product work.">
   <section class="container-prose py-20">
     <h1 class="heading-xl mb-3">Approach</h1>
     <span class="accent-bar bg-amber-700 dark:bg-amber-400"></span>
@@ -58,16 +58,20 @@ const technicalDepth = [
       <h2 class="heading-md mb-6">Background</h2>
       <div class="space-y-4 text-body">
         <p>
-          My career sits at the intersection of technical architecture and product strategy. For 15+ years, I have defined, built, and launched enterprise products in cloud infrastructure, security, observability, and integration.
+          I've spent 15 years as the product person who sits between architecture, security, and the business. At Oracle I owned cloud security products, including the compliance work that got OCI through US government audits. At Puget Sound Energy I run observability for <strong class="text-slate-800 dark:text-slate-200">Enterprise Integration Services (EIS)</strong>, the layer that connects SAP, distribution management systems, AWS backends, and a long list of SaaS and internal apps. Before that I did consulting work across healthcare, e-commerce, and media.
         </p>
         <p>
-          At Oracle, I owned cloud security products that passed government audits and enabled a $20B partnership. At Puget Sound Energy, I lead observability for <strong class="text-slate-800 dark:text-slate-200">Enterprise Integration Services (EIS)</strong>: the integration layer connecting SAP, advanced distribution management systems, AWS backends, customer mobile platforms, and numerous SaaS and internal applications. I apply this foundation to AI/LLM integrations: useful workflows, clear data boundaries, measurable quality, and accountable operation.
+          I write the specs, I draw the architecture, and I've shipped the code when it needed shipping.
         </p>
+      </div>
+    </div>
+
+    <!-- Where AI fits -->
+    <div class="mb-16">
+      <h2 class="heading-md mb-6">Where AI fits</h2>
+      <div class="space-y-4 text-body">
         <p>
-          I build observability culture across development teams. Technology, process, and culture all matter. I shift monitoring from isolated metrics to end-to-end functional health. As a consultant, I have launched products across healthcare, e-commerce, and media.
-        </p>
-        <p class="font-medium text-slate-800 dark:text-slate-200">
-          I write technical specs, design architectures, and ship products.
+          AI is the newest thing I work with, not the thing I'm an expert in. Nobody is yet. What carries over from the older work is the same set of questions: who can use it, what data it can see, what happens when it's wrong, who finds out, and how it connects to the systems employees already use. I've been through that with cloud access, with integrations, and with monitoring. I'm applying it to AI tools now.
         </p>
       </div>
     </div>
@@ -100,7 +104,7 @@ const technicalDepth = [
 
     <!-- CTA -->
     <div class="border-t border-slate-200 dark:border-slate-800 pt-12 text-center">
-      <h3 class="heading-md mb-4">Want to discuss how I can help your team?</h3>
+      <h3 class="heading-md mb-4">If this matches a problem you have, get in touch.</h3>
       <a href="/contact/" class="btn-primary">Get in Touch</a>
     </div>
   </section>
