@@ -20,7 +20,7 @@ Needed once:
 2. Proxied DNS CNAME `isdino-ingest` → `7be1c5eb-f738-407b-9168-994938e14af5.cfargotunnel.com`.
 3. Access app on `isdino-ingest.virtualdino.com` with a single Service Auth policy
    for service token `isdino-web-ingest`.
-4. Pages project `isdino-com`: variable `VL_URL=https://isdino-ingest.virtualdino.com`,
+4. Pages project `personal-portfolio`: variable `VL_URL=https://isdino-ingest.virtualdino.com`,
    secrets `CF_ACCESS_CLIENT_ID` and `CF_ACCESS_CLIENT_SECRET`.
 
 Only the write path is exposed; reads stay LAN-only (`logs.virtualdino.com`).
