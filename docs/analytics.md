@@ -20,8 +20,10 @@ Needed once:
 2. Proxied DNS CNAME `isdino-ingest` → `7be1c5eb-f738-407b-9168-994938e14af5.cfargotunnel.com`.
 3. Access app on `isdino-ingest.virtualdino.com` with a single Service Auth policy
    for service token `isdino-web-ingest`.
-4. Pages project `personal-portfolio`: variable `VL_URL=https://isdino-ingest.virtualdino.com`,
-   secrets `CF_ACCESS_CLIENT_ID` and `CF_ACCESS_CLIENT_SECRET`.
+4. `VL_URL=https://isdino-ingest.virtualdino.com` lives in `wrangler.toml` `[vars]` (Pages treats that file as
+   the source of truth, so a dashboard-set value is ignored). The Access credentials are Pages secrets on
+   project `personal-portfolio`: `CF_ACCESS_CLIENT_ID` and `CF_ACCESS_CLIENT_SECRET`
+   (`npx wrangler pages secret put <name> --project-name personal-portfolio`).
 
 Only the write path is exposed; reads stay LAN-only (`logs.virtualdino.com`).
 
@@ -47,6 +49,17 @@ What people care about (clicks):
 
     service:=isdino-web e:=click | stats by (kind, target) count() as clicks | sort by (clicks desc)
 
-Attributed applications (`?application=<id>`):
+Attributed applications (`?application=<id>` is only on the landing page view, so readers are matched by session):
 
     service:=isdino-web e:=pv app:!"" | stats by (app) count_uniq(sid) as humans
+
+Readers for one application (replace 1842):
+
+    service:=isdino-web e:=read sid:in(service:=isdino-web e:=pv app:=1842 | fields sid) | stats count_uniq(sid) as readers
+
+## Troubleshooting
+
+No `isdino-web` events after a deploy: check the function logs
+(`npx wrangler pages deployment tail <deployment-id> --project-name personal-portfolio`) for
+`VL_URL is not set` or `victorialogs ingest failed <status>` (403 = Access rejected the token,
+5xx = the tunnel host cannot reach VictoriaLogs).
